@@ -12,11 +12,20 @@ body {
     font-family: "Montserrat", sans-serif;
     margin : 0;
     /* height: 100%; */
+    display: grid;
+    grid-template-rows: 3.5rem auto fit-content(8rem);
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
+    /* padding-top: 3.5rem; */
+    height: 100%;
 }
 
 main {
-    min-height: calc(100vh - 3.5rem - 8rem);
-    margin-top: 3.5rem;
+    /* min-height: calc(100vh - 3.5rem - 8rem); */
+    /* margin-top: 3.5rem; */
+    grid-area: main;
+    /* grid-row: 2 / 3; */
 }
 
 body::-webkit-scrollbar {
@@ -131,6 +140,8 @@ body::-webkit-scrollbar {
     background: black;
     padding: 2rem;
     margin-top: 3rem;
+    /* grid-row: 3 / 4; */
+    grid-area: footer;
 }
 
 .main-footer__links {
